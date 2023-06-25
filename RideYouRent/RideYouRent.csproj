@@ -454,6 +454,7 @@
     <Content Include="css\bootstrap\mixins\.DS_Store" />
     <None Include="Properties\PublishProfiles\RideYouRentST10127626 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="AddCarForm.aspx" />
     <Content Include="HomeAdmin.aspx" />
     <Content Include="image\1.jpg" />
     <Content Include="image\bg.gif" />
@@ -521,6 +522,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="AddCarForm.aspx.cs">
+      <DependentUpon>AddCarForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCarForm.aspx.designer.cs">
+      <DependentUpon>AddCarForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeAdmin.aspx.cs">
       <DependentUpon>HomeAdmin.aspx</DependentUpon>

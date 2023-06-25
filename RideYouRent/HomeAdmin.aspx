@@ -108,7 +108,6 @@
                 <h2 class="auto-style1">Cars</h2>
                 <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="CarNo" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="CarNo" HeaderText="CarNo" ReadOnly="True" SortExpression="CarNo" />
                         <asp:BoundField DataField="Car_Make" HeaderText="Car_Make" SortExpression="Car_Make" />
                         <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
