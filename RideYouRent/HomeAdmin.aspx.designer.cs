@@ -42,6 +42,33 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataGoods;
 
         /// <summary>
+        /// btnAddCar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddCar;
+
+        /// <summary>
+        /// btnDeleteCar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteCar;
+
+        /// <summary>
+        /// btnUpdateCar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateCar;
+
+        /// <summary>
         /// GridView4 control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,33 @@ namespace Disaster_Alleviation_Foundation
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+
+        /// <summary>
+        /// btnAddDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddDriver;
+
+        /// <summary>
+        /// btnDeleteDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteDriver;
+
+        /// <summary>
+        /// btnUpdateDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateDriver;
 
         /// <summary>
         /// GridView3 control.
@@ -78,6 +132,33 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceins;
 
         /// <summary>
+        /// btnAddInspector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddInspector;
+
+        /// <summary>
+        /// btnDeleteInspector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteInspector;
+
+        /// <summary>
+        /// btnUpdateInspector control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateInspector;
+
+        /// <summary>
         /// GridView2 control.
         /// </summary>
         /// <remarks>
@@ -96,13 +177,13 @@ namespace Disaster_Alleviation_Foundation
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataDisaster;
 
         /// <summary>
-        /// btnDisaster control.
+        /// btnRental control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDisaster;
+        protected global::System.Web.UI.WebControls.Button btnRental;
 
         /// <summary>
         /// GridView5 control.
@@ -121,5 +202,14 @@ namespace Disaster_Alleviation_Foundation
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+
+        /// <summary>
+        /// btnReturnals control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReturnals;
     }
 }

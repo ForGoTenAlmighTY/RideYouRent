@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Disaster Alleviation Foundation</title>
+    <title>Ride You Rent</title>
     <link href="css/style1.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
@@ -43,16 +43,15 @@
             height: 88px;
             background-color: #3e054f;
             color: #fff;
-            border: 1px solid transparent;
-            padding: 0.375rem 0.75rem;
+            border: 1px solid #0062cc;
             font-size: 1rem;
             line-height: 1.5;
             border-radius: 0.25rem;
-            border-color: #0062cc;
             display: inline-block;
             font-weight: 400;
             text-align: center;
-            vertical-align: middle
+            vertical-align: middle;
+            margin-left: 16px;
         }
         .auto-style4 {
             height: 37px;
@@ -86,21 +85,19 @@
     <form id="form1" runat="server">
         <header>
             <div class="content-wrapper">
-                <h1>Disaster Alleviation Foundation</h1>
+                <h1>Ride You Rent</h1>
                 <nav>
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/HomeAdmin.aspx">Home</a>
                     <a href="https://disasteralleviationfoundation1.azurewebsites.net/LogIn.aspx">Log-Out</a>
                     
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/CategoryAdmin.aspx">New Category</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/GoodsAdmin.aspx">New Goods</a>
-                    <a href="https://disasteralleviationfoundation1.azurewebsites.net/DisasterForm.aspx">New Disaster</a>
+                   
                 </nav>
 
             </div>
 
 
             <div class="auto-style2" style="height: 153px">
-                <h2 class="auto-style3">Welcome to Back Administrator</h2>
+                <h2 class="auto-style3">Welcome to Ride You Rent</h2>
       
             </div>
         </header>
@@ -131,6 +128,9 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataGoods" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.Car"></asp:SqlDataSource>
+     <asp:Button ID="btnAddCar" class="btn" runat="server" Text="Add Car" Height="59px" Width="146px" OnClick="btnAddCar_Click"  />
+                <asp:Button ID="btnDeleteCar" class="btn" runat="server" Text="Delete Car" Height="59px" Width="146px" OnClick="btnDeleteCar_Click"  />
+                <asp:Button ID="btnUpdateCar" class="btn" runat="server" Text="Update Car" Height="59px" Width="146px" OnClick="btnUpdateCar_Click"/>
 
             </div>
             <div class="recentlyadded content-wrapper">
@@ -153,6 +153,10 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.Driver"></asp:SqlDataSource>
+                 <asp:Button ID="btnAddDriver" class="btn" runat="server" Text="Add Driver" Height="59px" Width="146px" OnClick="btnAddDriver_Click" />
+                <asp:Button ID="btnDeleteDriver" class="btn" runat="server" Text="Delete Driver" Height="59px" Width="146px" OnClick="btnDeleteDriver_Click" />
+                <asp:Button ID="btnUpdateDriver" class="btn" runat="server" Text="Update Driver" Height="59px" Width="146px" OnClick="btnUpdateDriver_Click"  />
+
                
             </div>
 
@@ -177,6 +181,10 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSourceins" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.[Inspector]"></asp:SqlDataSource>
+                <asp:Button ID="btnAddInspector" class="btn" runat="server" Text="Add Inspector" Height="59px" Width="146px" OnClick="btnAddInspector_Click" />
+                <asp:Button ID="btnDeleteInspector" class="btn" runat="server" Text="Delete Inspector" Height="59px" Width="146px" OnClick="btnDeleteInspector_Click"  />
+                <asp:Button ID="btnUpdateInspector" class="btn" runat="server" Text="Update Inspector" Height="59px" Width="146px" OnClick="btnUpdateInspector_Click"  />
+
 
             </div>
             <div class="recentlyadded content-wrapper">
@@ -202,7 +210,8 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.[Rental]"></asp:SqlDataSource>
-                <asp:Button ID="btnDisaster" class="btn" runat="server" Text="New Disaster Aid" Height="59px" Width="146px" OnClick="btnDisaster_Click" />
+                <asp:Button ID="btnRental" class="btn" runat="server" Text="Add Rental" Height="59px" Width="146px" OnClick="btnRental_Click" />
+                
             </div>
 
                 <div class="recentlyadded content-wrapper">
@@ -226,7 +235,7 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT Returnal.CarNo, Returnal.Inspector, Returnal.Driver, Returnal.Return_Date, DATEDIFF(day, Rental.EndDate, Returnal.Return_Date) AS Elapsed_Date, DATEDIFF(day, Rental.EndDate, Returnal.Return_Date) * 500 AS Fine FROM ST10127626.Returnal INNER JOIN ST10127626.Rental ON Returnal.CarNo = Rental.CarNo AND Returnal.Inspector = Rental.Inspector"></asp:SqlDataSource>
-
+                     <asp:Button ID="btnReturnals" class="btn" runat="server" Text="Add Returnals" Height="59px" Width="146px" OnClick="btnReturnals_Click" />
             </div>
 
         </div>
