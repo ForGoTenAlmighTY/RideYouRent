@@ -167,7 +167,7 @@
 
     <footer>
         <div class="content-wrapper">
-            <p>@2022 Disaster Alleviation Foundation</p>
+            <p>@2023 Ride You Rent</p>
         </div>
     </footer>
 

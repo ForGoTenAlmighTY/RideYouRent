@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Disaster_Alleviation_Foundation
+namespace RideYouRent
 {
     public partial class HomeAdmin : System.Web.UI.Page
     {

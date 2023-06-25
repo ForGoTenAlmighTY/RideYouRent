@@ -421,6 +421,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddDriverForm.aspx" />
+    <Content Include="AddInspectorForm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -497,6 +499,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDriverForm.aspx.cs">
+      <DependentUpon>AddDriverForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDriverForm.aspx.designer.cs">
+      <DependentUpon>AddDriverForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddInspectorForm.aspx.cs">
+      <DependentUpon>AddInspectorForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInspectorForm.aspx.designer.cs">
+      <DependentUpon>AddInspectorForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

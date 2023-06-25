@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Disaster_Alleviation_Foundation
+namespace RideYouRent
 {
 
 
