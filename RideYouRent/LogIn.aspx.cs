@@ -21,7 +21,7 @@ namespace Disaster_Alleviation_Foundation
             //CONNECTION TO THE DATABASE
             SqlConnection con = new SqlConnection(@"Server=tcp:dbsvc-cldv6211-st10127626.database.windows.net,1433;Initial Catalog=DBS_VC_CLDV6211_ST10127626;Persist Security Info=False;User ID=st10127626;Password=Vikitar15*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Inspectors WHERE Inspector_no='" + txtInsID.Text + "' AND Inspect_password ='" + txtPassword.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM ST10127626.Inspector WHERE Email='" + txtEmail.Text + "' AND Inspect_password ='" + txtPassword.Text + "'", con); 
             con.Open();
 
             //EXECUTES THE QUERY DECLARED

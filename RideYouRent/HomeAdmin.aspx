@@ -108,15 +108,17 @@
         <div class="auto-style9">
 <div class="auto-style8">
  <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style1">Users</h2>
-                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="UserID" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <h2 class="auto-style1">Cars</h2>
+                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataGoods" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="CarNo" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
-                        <asp:BoundField DataField="UserID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
-                        <asp:BoundField DataField="UserName" HeaderText="Username" SortExpression="UserName" />
-                        <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                        <asp:BoundField DataField="UserMoney" HeaderText="User money" SortExpression="UserMoney" />
+                        <asp:BoundField DataField="CarNo" HeaderText="CarNo" ReadOnly="True" SortExpression="CarNo" />
+                        <asp:BoundField DataField="Car_Make" HeaderText="Car_Make" SortExpression="Car_Make" />
+                        <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
+                        <asp:BoundField DataField="Body_Type" HeaderText="Body_Type" SortExpression="Body_Type" />
+                        <asp:BoundField DataField="Kilometres_Travelled" HeaderText="Kilometres_Travelled" SortExpression="Kilometres_Travelled" />
+                        <asp:BoundField DataField="Service_Travelled" HeaderText="Service_Travelled" SortExpression="Service_Travelled" />
+                        <asp:BoundField DataField="Available" HeaderText="Available" SortExpression="Available" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -128,20 +130,17 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataGoods" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [UserID], [UserName], [Password], [Email], [UserMoney] FROM [USERS]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataGoods" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.Car"></asp:SqlDataSource>
 
             </div>
             <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style1">Goods Donations
-                </h2>
-                <asp:GridView ID="GridView4" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6">
+                <h2 class="auto-style1">&nbsp;Driver</h2>
+                <asp:GridView ID="GridView4" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Height="168px" Width="770px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="Driver_Name">
                     <Columns>
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
-                        <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
-                        <asp:BoundField DataField="DateDonation" HeaderText="DateDonation" SortExpression="DateDonation" />
-                        <asp:BoundField DataField="DonorName" HeaderText="DonorName" SortExpression="DonorName" />
-                        <asp:BoundField DataField="NumItems" HeaderText="NumItems" SortExpression="NumItems" />
+                        <asp:BoundField DataField="Driver_Name" HeaderText="Driver_Name" SortExpression="Driver_Name" ReadOnly="True" />
+                        <asp:BoundField DataField="Driver_Address" HeaderText="Driver_Address" SortExpression="Driver_Address" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                        <asp:BoundField DataField="Mobile" HeaderText="Mobile" SortExpression="Mobile" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -153,20 +152,19 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Description], [Quantity], [Category], [DateDonation], [DonorName], [NumItems] FROM [Goods]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.Driver"></asp:SqlDataSource>
                
             </div>
 
            
 
             <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style4">Monetary Donations
-                </h2><asp:GridView ID="GridView3" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="148px" Width="560px" CellSpacing="2" CssClass="auto-style7">
+                <h2 class="auto-style4">Inspector</h2><asp:GridView ID="GridView3" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSourceins" Height="148px" Width="560px" CellSpacing="2" CssClass="auto-style7" DataKeyNames="Inspector_Name">
                     <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                        <asp:BoundField DataField="Amount" HeaderText="Amount" SortExpression="Amount" />
-                        <asp:BoundField DataField="DateDonation" HeaderText="Date Donation" SortExpression="DateDonation" />
-                        <asp:BoundField DataField="DonorName" HeaderText="Donor Name" SortExpression="DonorName" />
+                        <asp:BoundField DataField="Inspector_no" HeaderText="Inspector_no" SortExpression="Inspector_no" />
+                        <asp:BoundField DataField="Inspector_Name" HeaderText="Inspector_Name" ReadOnly="True" SortExpression="Inspector_Name" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                        <asp:BoundField DataField="Mobile" HeaderText="Mobile" SortExpression="Mobile" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -178,21 +176,20 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [Amount], [DateDonation], [DonorName], [ID] FROM [MoneyDonation]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSourceins" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.[Inspector]"></asp:SqlDataSource>
 
             </div>
             <div class="recentlyadded content-wrapper">
-                <h2 class="auto-style5">Disasters Aid
-                </h2>
-<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="DisID">
+                <h2 class="auto-style5">Rentals</h2>
+<asp:GridView ID="GridView2" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataDisaster" Height="165px" Width="646px" CellSpacing="2" CssClass="auto-style6" DataKeyNames="Rental_ID">
                     <Columns>
+                        <asp:BoundField DataField="Rental_ID" HeaderText="Rental_ID" SortExpression="Rental_ID" ReadOnly="True" />
+                        <asp:BoundField DataField="CarNo" HeaderText="CarNo" SortExpression="CarNo" />
+                        <asp:BoundField DataField="Inspector" HeaderText="Inspector" SortExpression="Inspector" />
+                        <asp:BoundField DataField="Driver" HeaderText="Driver" SortExpression="Driver" />
+                        <asp:BoundField DataField="Rental_Fee" HeaderText="Rental_Fee" SortExpression="Rental_Fee" />
                         <asp:BoundField DataField="StartDate" HeaderText="StartDate" SortExpression="StartDate" />
                         <asp:BoundField DataField="EndDate" HeaderText="EndDate" SortExpression="EndDate" />
-                        <asp:BoundField DataField="DisID" HeaderText="DisID" SortExpression="DisID" InsertVisible="False" ReadOnly="True" />
-                        <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                        <asp:BoundField DataField="AidTypes" HeaderText="AidTypes" SortExpression="AidTypes" />
-                        <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
                     </Columns>
                     <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                     <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -204,8 +201,32 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DisasterAlleviationDatabaseConnectionString %>" SelectCommand="SELECT [StartDate], [EndDate], [DisID], [Location], [Description], [AidTypes], [status] FROM [Disaster]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataDisaster" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT * FROM ST10127626.[Rental]"></asp:SqlDataSource>
                 <asp:Button ID="btnDisaster" class="btn" runat="server" Text="New Disaster Aid" Height="59px" Width="146px" OnClick="btnDisaster_Click" />
+            </div>
+
+                <div class="recentlyadded content-wrapper">
+                <h2 class="auto-style4">Returnals</h2><asp:GridView ID="GridView5" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Height="148px" Width="560px" CellSpacing="2" CssClass="auto-style7">
+                    <Columns>
+                        <asp:BoundField DataField="CarNo" HeaderText="CarNo" SortExpression="CarNo" />
+                        <asp:BoundField DataField="Inspector" HeaderText="Inspector" SortExpression="Inspector" />
+                        <asp:BoundField DataField="Driver" HeaderText="Driver" SortExpression="Driver" />
+<asp:BoundField DataField="Return_Date" HeaderText="Return_Date" SortExpression="Return_Date"></asp:BoundField>
+                        <asp:BoundField DataField="Elapsed_Date" HeaderText="Elapsed_Date" SortExpression="Elapsed_Date" ReadOnly="True" />
+                        <asp:BoundField DataField="Fine" HeaderText="Fine" ReadOnly="True" SortExpression="Fine" />
+                    </Columns>
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT Returnal.CarNo, Returnal.Inspector, Returnal.Driver, Returnal.Return_Date, DATEDIFF(day, Rental.EndDate, Returnal.Return_Date) AS Elapsed_Date, DATEDIFF(day, Rental.EndDate, Returnal.Return_Date) * 500 AS Fine FROM ST10127626.Returnal INNER JOIN ST10127626.Rental ON Returnal.CarNo = Rental.CarNo AND Returnal.Inspector = Rental.Inspector"></asp:SqlDataSource>
+
             </div>
 
         </div>

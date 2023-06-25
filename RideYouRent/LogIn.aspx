@@ -39,7 +39,7 @@
 						<form id="form1" runat="server">
 		      		<div class="form-group">
 		      		
-						  <asp:TextBox ID="txtInsID" type="email" class="form-control rounded-left" placeholder="Email Address" runat="server" required></asp:TextBox>
+						  <asp:TextBox ID="txtEmail" type="email" class="form-control rounded-left" placeholder="Email Address" runat="server" required></asp:TextBox>
 		      		</div>
 	            <div class="form-group d-flex">
 	             
