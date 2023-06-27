@@ -38,17 +38,6 @@
             height: 74px;
         }
 
-        .auto-style5 {
-            height: 45px;
-            color: coral;
-            font-size: 20px;
-         
-        }
-
-        .auto-style8 {
-            margin-left: 431px;
-        }
-
         .p {
             color: darkmagenta;
         }
@@ -59,17 +48,7 @@
             background-size: cover;
         }
 
-        .auto-style6 {
-            color: darkmagenta;
-            margin-bottom: 0px;
-        }
-        .auto-style10 {
-            position: relative;
-            left: 0px;
-            top: 0px;
-            margin-bottom: 1rem;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -87,7 +66,7 @@
 
 
         <div class="auto-style2" style="height: 153px">
-            <h2 class="auto-style3">Add Car</h2>
+            <h2 class="auto-style3">Add Inspector</h2>
 
         </div>
     </header>
@@ -102,56 +81,35 @@
                     <div class="col-md-6 col-lg-5">
                         <div class="login-wrap p-4 p-md-5">
 
-                            <h3 class="text-center mb-4">New Car</h3>
+                            <h3 class="text-center mb-4">New Inspector</h3>
                            
                              
+                                
                                 <div class="form-group d-flex">
 
-                                    <asp:TextBox ID="txtCarNo" type="text" class="form-control rounded-left" placeholder="Car number" runat="server" required></asp:TextBox>
+                                    <asp:TextBox ID="txtInspectorNo" type="text" class="form-control rounded-left" placeholder="Inspector Number" runat="server" required></asp:TextBox>
                                 </div>
 
-                                <div class="form-group">
-                                    <p class="auto-style6">Car Make</p>
-                                    <asp:DropDownList ID="DropDownMake" runat="server" DataSourceID="SqlDataSourceCarMake" DataTextField="CarDescription" DataValueField="CarDescription"></asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSourceCarMake" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT [CarDescription] FROM ST10127626.[Car_Make]"></asp:SqlDataSource>
-                                </div>
-
+                                
                             <div class="form-group">
 
-                                    <asp:TextBox ID="txtModel" type="text" class="form-control rounded-left" placeholder="Model of the car" runat="server" required></asp:TextBox>
+                                    <asp:TextBox ID="txtInspectorName" type="text" class="form-control rounded-left" placeholder="Inspector Name" runat="server" required></asp:TextBox>
                                 </div>
 
-                            <div class="form-group">
-                                    <p class="auto-style6">Car Body Type</p>
-                                <asp:DropDownList ID="DropDownBodyType" runat="server" DataSourceID="SqlDataBodytype" DataTextField="CarBodyTypeDescription" DataValueField="CarBodyTypeDescription"></asp:DropDownList>
-                                     <asp:SqlDataSource ID="SqlDataBodytype" runat="server" ConnectionString="<%$ ConnectionStrings:DBS_VC_CLDV6211_ST10127626ConnectionString %>" SelectCommand="SELECT [CarBodyTypeDescription] FROM ST10127626.[CarBodyType]"></asp:SqlDataSource>
-                                     </div>
-                           
-                                                           
+                            
+                                                                                     
                                 <div class="form-group">
 
-                                    <asp:TextBox ID="txtKilometresTravelled" type="text" class="form-control rounded-left" placeholder="Kilometres Travelled" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmail" type="email" class="form-control rounded-left" placeholder="Email address" runat="server"></asp:TextBox>
                                 </div>   
                             
                                 <div class="form-group">
 
-                                    <asp:TextBox ID="txtServiceTravelled" type="text" class="form-control rounded-left" placeholder="Service Travelled" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtMobile" type="text" class="form-control rounded-left" placeholder="Mobile number" runat="server"></asp:TextBox>
                                 </div>
 
-                             
-                            <div class="form-group">
-                                 <p class="auto-style6">Available</p>
-                                 <asp:DropDownList ID="DropDownAvailable" runat="server">
-                                        <asp:ListItem>Yes</asp:ListItem>
-                                        <asp:ListItem>No</asp:ListItem>
-                                    </asp:DropDownList>
-                            </div>
-
-                                
-
-                                    <asp:Button ID="btnAddCar" runat="server" class="btn btn-primary rounded submit p-3 px-5" Text="Add Car" OnClick="btnAddCar_Click" />
+                                 <asp:Button ID="btnAddInspector" runat="server" class="btn btn-primary rounded submit p-3 px-5" Text="Add Inspector" OnClick="btnAddInspector_Click"  />
                                    
-                                
                             
                         </div>
                     </div>
@@ -167,7 +125,7 @@
 
     <footer>
         <div class="content-wrapper">
-            <p>@2022 Disaster Alleviation Foundation</p>
+            <p>@2023 Ride You Rent</p>
         </div>
     </footer>
 

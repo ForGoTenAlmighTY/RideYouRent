@@ -85,7 +85,7 @@
                     <div class="col-md-6 col-lg-5">
                         <div class="login-wrap p-4 p-md-5">
 
-                            <h3 class="text-center mb-4">New Driver</h3>
+                            <h3 class="textNew Driver</h3>
                            
                              
                                 <div class="form-group d-flex">
@@ -133,7 +133,7 @@
 
     <footer>
         <div class="content-wrapper">
-            <p>@2022 Disaster Alleviation Foundation</p>
+            <p>@2023 Ride You Rent</p>
         </div>
     </footer>
 
